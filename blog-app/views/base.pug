@@ -15,16 +15,16 @@ html
         .jumbotron
             .mb-3
                 label.form-label(for='title') Blog Title
-                input#title.form-control(type='text' placeholder='title')
+                input#title.form-control(type='text' placeholder='title' required='')
             .mb-3
-                label.form-label(for='description') Description
-                textarea#description.form-control(rows='3')
+                label.form-label(for='description' ) Description
+                textarea#description.form-control(rows='4' placeholder='description' required='')
 
             button.btn.btn-primary.add(type='button') Add Post
 
         .row
             each post in posts
-                .col-sm-4
+                .col-md-4(style='margin-bottom: 3rem;')
                     .card(style='width: 18rem;')
                         .card-body
                             h5.card-title= post.title

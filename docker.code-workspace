@@ -12,6 +12,17 @@
     "[javascript]": {
       "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
+    "[yaml]": {
+      "editor.formatOnSave": false,
+      "editor.insertSpaces": true,
+      "editor.tabSize": 2,
+      "editor.autoIndent": "advanced",
+      "editor.quickSuggestions": {
+        "other": true,
+        "comments": false,
+        "strings": true
+      }
+    },
     "editor.formatOnSave": true,
     "prettier.jsxSingleQuote": true,
     "prettier.jsxBracketSameLine": false,

@@ -1,0 +1,22 @@
+extends base 
+
+block content 
+    h1.display-5 App - Nodejs, MongoDb, Docker, Jenkins. 
+        .jumbotron
+            .mb-3
+                label.form-label(for='title') Blog Title
+                input#title.form-control(type='text' placeholder='title')
+            .mb-3
+                label.form-label(for='description') Description
+                textarea#description.form-control(rows='3')
+
+            button.btn.btn-primary.add(type='button') Add Post
+
+        .row
+            each post in posts
+                .col-sm-4
+                    .card(style='width: 18rem;')
+                        .card-body
+                            h5.card-title= post.title
+                            p.card-text=post.description
+                            button.btn.btn-danger.delete(type='button',data-id=post.id) Delete Post

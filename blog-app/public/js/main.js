@@ -2,6 +2,12 @@
 const addButton = document.querySelector(".add");
 const deleteButton = document.getElementsByClassName("delete");
 
+/**
+ * !TODO input validation required
+ * @IMPLEMENT using React JS
+ *
+ */
+
 if (addButton) {
   addButton.addEventListener("click", (e) => {
     e.preventDefault();

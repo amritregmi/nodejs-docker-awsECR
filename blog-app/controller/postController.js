@@ -2,8 +2,12 @@ const Post = require("../models/postModel");
 
 // gets all post
 exports.getAllPost = async (req, res, next) => {
-  const posts = await Post.find();
-  res.status(200).render("base", { posts });
+  try {
+    const posts = await Post.find();
+    res.status(200).render("base", { posts });
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 // create a post
